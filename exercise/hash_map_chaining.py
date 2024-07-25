@@ -5,7 +5,7 @@ class Pair:
 
 
 class HashMapChaining:
-    """链式地址哈希表"""
+    """基于数组实现的链式地址哈希表"""
 
     def __init__(self):
         """构造方法"""
