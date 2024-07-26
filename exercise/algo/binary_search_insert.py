@@ -4,8 +4,8 @@
 现将 target 插入数组 nums 中，并保持其有序性。
 若数组中已存在元素 target ，则插入到其左方。请返回插入后 target 在数组中的索引。
 """
-nums = [1, 3, 6, 8, 15, 23, 26, 31, 35]
-target = 12
+nums = [1, 3, 6, 6, 6, 8, 15, 23, 23, 23, 26, 31, 35]
+target = 23
 
 
 def binary_search_insert(nums: list[int], target: int) -> int:
@@ -22,7 +22,7 @@ def binary_search_insert(nums: list[int], target: int) -> int:
     return i  # 不存在target，index 是 i
 
 
-def binary_search_insertion2(nums: list[int], target: int) -> int:
+def binary_search_insert_duplication(nums: list[int], target: int) -> int:
     """二分查找插入点（存在重复元素）"""
     i, j = 0, len(nums) - 1
     while i <= j:
@@ -37,4 +37,4 @@ def binary_search_insertion2(nums: list[int], target: int) -> int:
     return i
 
 
-print(binary_search_insert(nums, target))
+print(binary_search_insert_duplication(nums, target))
